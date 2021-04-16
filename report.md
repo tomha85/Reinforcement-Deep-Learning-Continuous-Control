@@ -14,7 +14,7 @@ The action space is continuous and it is included a vector that has four number 
 The actor network mapping state to action
 
 - Input Layer: 33
-- Hidden Layer 1: 128
+- Hidden Layer 1: 256
 - Hidden Layer 2: 128
 - Output Layer: 4
 
@@ -35,15 +35,15 @@ Actor(
 The critoc network mapping (state, action) pair to Q-value
 
 - Input Layer: 33
-- Hidden Layer 1: 128 + 4
+- Hidden Layer 1: 256 + 4
 - Hidden Layer 2: 128
 - Output Layer: 1
 
 ~~~python
 Critic(
   (hidden_layers): ModuleList(
-    (0): Linear(in_features=33, out_features=128, bias=True)
-    (1): Linear(in_features=132, out_features=128, bias=True)
+    (0): Linear(in_features=33, out_features=256, bias=True)
+    (1): Linear(in_features=260, out_features=128, bias=True)
   )
   (output): Linear(in_features=128, out_features=1, bias=True)
 )
