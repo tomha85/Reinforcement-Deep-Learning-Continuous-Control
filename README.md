@@ -1,4 +1,4 @@
 # Reinforcement-Deep-Learning-Continuous-Control
 
-![image](https://user-images.githubusercontent.com/31414852/p2.gif)
+![image](https://github.com/tomha85/Reinforcement-Deep-Learning-Continuous-Control/blob/main/p2.gif?raw=true)
 
