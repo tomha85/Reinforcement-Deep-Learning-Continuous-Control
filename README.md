@@ -1,2 +1,3 @@
 # Reinforcement-Deep-Learning-Continuous-Control
-https://user-images.githubusercontent.com/10624937/43851024-320ba930-9aff-11e8-8493-ee547c6af349.gif
+
+![image](https://user-images.githubusercontent.com/31414852/115077433-09364280-9ecc-11eb-9834-20d7c38b72a8.png)
