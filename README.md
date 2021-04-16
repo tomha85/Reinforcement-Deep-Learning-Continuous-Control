@@ -27,7 +27,7 @@ Finally, unzip the environment archive in the 'project's environment' directory 
 Place the file in this folder, unzip (or decompress) the file and then write the correct path in the argument for creating the environment under the notebook `Navigation.ipynb`:
 
 ```python
-env = UnityEnvironment(file_name="/data/Banana_Linux_NoVis/Banana.x86_64")
+env = UnityEnvironment(file_name='/data/Reacher_One_Linux_NoVis/Reacher_One_Linux_NoVis.x86_64')
 
 ```
 ### Dependencies
