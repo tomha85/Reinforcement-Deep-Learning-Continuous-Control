@@ -53,9 +53,9 @@ The code:
 
 model.py : included the Actor and the Critic classes.They used for the training.
 
-ddpg_agent.py : the DDPG agent and a Replay Buffer memory used by the ddpg agent.
+ddpg_agent.py : the ddpg_agent and Replay Buffer memory used.
 
-The learn(): updates the policy and value parameters given batch of experience.
+The learn(): updated the policy and value parameters given batch of experience.
 
 ### Hyper-parameters
 
@@ -64,10 +64,8 @@ state_size = 33         # environment State size
 action_size = 4         # environment Action size 
 buffer_size = int(1e5)  # replay buffer size
 batch_size = 128        # batch size
-
 gamma = 0.99            # discount factor
 tau = 1e-3              # for soft update of target parameters
-
 lr_actor = 5e-4         # learning rate of the actor 
 lr_critic = 5e-4        # learning rate of the critic
 weight_decay = 0        # L2 weight decay
@@ -88,7 +86,7 @@ sigma = 0.1
 
 ![image](https://user-images.githubusercontent.com/31414852/115101511-cfd4f580-9f12-11eb-993b-4a697c1fae1e.png)
 
-ddpg solved the problem in 591 episodes.
+ddpg method solved the problem in 591 episodes.
 
 
 ## Future Improvement
