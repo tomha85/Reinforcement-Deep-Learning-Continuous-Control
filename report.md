@@ -35,15 +35,15 @@ Actor(
 The critoc network mapping (state, action) pair to Q-value
 
 - Input Layer: 33
-- Hidden Layer 1: 256 + 4
+- Hidden Layer 1: 128 + 4
 - Hidden Layer 2: 128
 - Output Layer: 1
 
 ~~~python
 Critic(
   (hidden_layers): ModuleList(
-    (0): Linear(in_features=33, out_features=256, bias=True)
-    (1): Linear(in_features=260, out_features=128, bias=True)
+    (0): Linear(in_features=33, out_features=128, bias=True)
+    (1): Linear(in_features=132, out_features=128, bias=True)
   )
   (output): Linear(in_features=128, out_features=1, bias=True)
 )
@@ -53,13 +53,28 @@ Critic(
 
 ### Hyper-parameters
 
-- Replay Memory Size = 1e5
-- Batch Size = 128
-- GAMMA = 0.99
-- TAU = 1e-3
-- Actor Learning Rate = 1e-3
-- Critic Learning Rate = 1e-4
-- Noise Decaying Rate = 0.99
+state_size = 33         # environment State size 
+action_size = 4         # environment Action size 
+buffer_size = int(1e5)  # replay buffer size
+batch_size = 128        # minibatch size
+
+gamma = 0.99            # discount factor
+tau = 1e-3              # for soft update of target parameters
+
+lr_actor = 5e-4         # learning rate of the actor 
+lr_critic = 5e-4        # learning rate of the critic
+weight_decay = 0        # L2 weight decay
+actor_fc1_units = 128   # Number of units for the layer 1 in the actor model
+actor_fc1_units = 128   # Number of units for the layer 2 in the actor model
+critic_fcs1_units = 128 # Number of units for the layer 1 in the critic model
+critic_fc2_units = 128  # Number of units for the layer 2 in the critic model
+bn_mode = 2             # Use Batch Norm. - 0=disabled, 1=BN before Activation, 2=BN after Activation 
+                        # (3, 4 are alt. versions of 1, 2)
+
+add_ounoise = True      # Add Ornstein-Uhlenbeck noise
+mu = 0.                 # Ornstein-Uhlenbeck noise parameter
+theta = 0.15            # Ornstein-Uhlenbeck noise parameter
+sigma = 0.1             # Ornstein-Uhlenbeck noise parameter
 
 ### Result
 
