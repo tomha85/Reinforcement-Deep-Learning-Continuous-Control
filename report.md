@@ -11,7 +11,8 @@ The action space is continuous and it is included a vector that has four number 
 ![image](https://user-images.githubusercontent.com/31414852/115116764-6c29e700-9f69-11eb-82a4-0f89c659bedb.png)
 
 Deep Deterministic Policy Gradient (DDPG) is an algorithm which concurrently learns a Q-function and a policy. It uses off-policy data and the Bellman equation to learn the Q-function, and uses the Q-function to learn the policy.
-DDPG trains a deterministic policy in an off-policy way. Because the policy is deterministic, if the agent were to explore on-policy, in the beginning it would probably not try a wide enough variety of actions to find useful learning signals. To make DDPG policies explore better, we add noise to their actions at training time. 
+
+DDPG trains a deterministic policy in an off-policy method, and due to the policy is deterministic, if the agent were to explore on-policy, in the beginning it would probably not try a wide enough variety of actions to find useful learning signals. To make DDPG policies explore better, we add noise to their actions at training time. 
 
 ### Actor Neural Network Architecture
 
@@ -31,7 +32,6 @@ Actor(
   (output): Linear(in_features=128, out_features=4, bias=True)
 )
 ```
-
 
 
 ### Critic Neural Network Architecture
@@ -62,6 +62,7 @@ ddpg_agent.py : the ddpg_agent and Replay Buffer memory used.
 The learn(): updated the policy and value parameters given batch of experience.
 
 ### Hyper-parameters
+The result comes from many try and error, it takes so long time to get good performance. I adjusted parameters like network size,learning rate. At the end I choosed the best one to give good performance. During the processing , I did increaseing the number of steps per episode that hepled changing the agent learning, the more the better.It also helps in our case if we put batch normalization in neural network. The last thing is learning rate, a little bit higher values of learning rate which make the agent learn better and easy to solve the problem. Both Neural Networks use the Adam optimizer with a learning rate of 2e-5 and batch size of 128.
 
 ```
 state_size = 33         # environment State size 
@@ -76,8 +77,9 @@ weight_decay = 0        # L2 weight decay
 actor_fc1_units = 128   # Number of units for the layer 1 in the actor model
 actor_fc1_units = 128   # Number of units for the layer 2 in the actor model
 critic_fcs1_units = 128 # Number of units for the layer 1 in the critic model
-critic_fc2_units = 128  # Number of units for the layer 2 in the critic model       
-      
+critic_fc2_units = 128  # Number of units for the layer 2 in the critic model 
+
+Noise:      
 mu = 0.                 
 theta = 0.15           
 sigma = 0.1             
