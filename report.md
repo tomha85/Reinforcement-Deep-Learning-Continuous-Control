@@ -84,9 +84,11 @@ sigma = 0.1
 
 ### Result
 
-![DDPG Scores][image1]
+![image](https://user-images.githubusercontent.com/31414852/115101513-d82d3080-9f12-11eb-8cec-8e046cd09ab8.png)
 
-DDPG solved the problem in 199 episodes.
+![image](https://user-images.githubusercontent.com/31414852/115101511-cfd4f580-9f12-11eb-993b-4a697c1fae1e.png)
+
+DDPG solved the problem in 591 episodes.
 
 
 ## Future Improvement
