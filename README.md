@@ -5,7 +5,6 @@
 In this project we will work with Reacher Environment. In this environment, doubled joined arm can move to taret locations. Reward of 0.1 is provided for each step that agents is in target position. The goal of this project is to make agent maintain target position as many time as possible.
 The observation space is 33 vaiables that included position, roatationm,velocity,and angular velocitiess of the arm. Each action is vector of 4 number of torque that applied to join. Each entry in the action vector is a number between -1 and 1.
 
-Distributed Training
 For this project, we will provide you with two separate versions of the Unity environment:
 
 The first version contains a single agent.
@@ -23,7 +22,7 @@ The barrier for solving the second version of the environment is slightly differ
 
 After each episode, we add up the rewards that each agent received (without discounting), to get a score for each agent. This yields 20 (potentially different) scores. We then take the average of these 20 scores.
 This yields an average score for each episode (where the average is over all 20 agents).
-As an example, consider the plot below, where we have plotted the average score (over all 20 agents) obtained with each episode.
+
 
 ### Getting Started
 
