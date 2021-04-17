@@ -14,7 +14,7 @@ The action space is continuous and it is included a vector that has four number 
 The actor network mapping state to action
 
 - Input Layer: 33
-- Hidden Layer 1: 256
+- Hidden Layer 1: 128
 - Hidden Layer 2: 128
 - Output Layer: 4
 
@@ -22,7 +22,7 @@ The actor network mapping state to action
 Actor(
   (hidden_layers): ModuleList(
     (0): Linear(in_features=33, out_features=128, bias=True)
-    (1): Linear(in_features=512, out_features=128, bias=True)
+    (1): Linear(in_features=132, out_features=128, bias=True)
   )
   (output): Linear(in_features=128, out_features=4, bias=True)
 )
