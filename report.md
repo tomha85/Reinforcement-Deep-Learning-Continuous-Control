@@ -79,7 +79,6 @@ theta = 0.15
 sigma = 0.1             
 ```
 
-
 ### Result
 
 ![image](https://user-images.githubusercontent.com/31414852/115101513-d82d3080-9f12-11eb-8cec-8e046cd09ab8.png)
@@ -91,6 +90,6 @@ ddpg method solved the problem in 591 episodes.
 
 ## Future Improvement
 
-- Tuning hyper parameters to get better performance;
-- Make the network more layers to  get good performance;
+- Tuning hyper parameters to get better performance
+- Make the network more layers to  get good performance
 - Continue working with Policy Gradient algorithm like A3C, A2C, PPO
