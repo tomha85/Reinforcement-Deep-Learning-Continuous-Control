@@ -49,7 +49,13 @@ Critic(
 )
 ~~~
 
+The code:
 
+model.py : included the Actor and the Critic classes.They used for the training.
+
+ddpg_agent.py : the DDPG agent and a Replay Buffer memory used by the ddpg agent.
+
+The learn(): updates the policy and value parameters given batch of experience.
 
 ### Hyper-parameters
 
