@@ -62,7 +62,7 @@ ddpg_agent.py : the ddpg_agent and Replay Buffer memory used.
 The learn(): updated the policy and value parameters given batch of experience.
 
 ### Hyper-parameters
-The result comes from many try and error, it takes so long time to get good performance. I adjusted parameters like network size,learning rate. At the end I choosed the best one to give good performance. During the processing , I did increaseing the number of steps per episode that hepled changing the agent learning, the more the better.It also helps in our case if we put batch normalization in neural network. The last thing is learning rate, a little bit higher values of learning rate which make the agent learn better and easy to solve the problem. Both Neural Networks use the Adam optimizer with a learning rate of 2e-5 and batch size of 128.
+The result comes from many try and error, it takes so long time to get good performance. I adjusted parameters like network size,learning rate. At the end I choosed the best one to give good performance. During the processing , I did increaseing the number of steps per episode that hepled changing the agent learning, the more the better.It also helps in our case if we put batch normalization in neural network. The last thing is learning rate, a little bit higher values of learning rate which make the agent learn better and easy to solve the problem. Both Neural Networks use the Adam optimizer with a learning rate of 5e-4 and batch size of 128.
 
 ```
 state_size = 33         # environment State size 
