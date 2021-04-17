@@ -59,10 +59,11 @@ The learn(): updates the policy and value parameters given batch of experience.
 
 ### Hyper-parameters
 
+```
 state_size = 33         # environment State size 
 action_size = 4         # environment Action size 
 buffer_size = int(1e5)  # replay buffer size
-batch_size = 128        # minibatch size
+batch_size = 128        # batch size
 
 gamma = 0.99            # discount factor
 tau = 1e-3              # for soft update of target parameters
@@ -73,14 +74,13 @@ weight_decay = 0        # L2 weight decay
 actor_fc1_units = 128   # Number of units for the layer 1 in the actor model
 actor_fc1_units = 128   # Number of units for the layer 2 in the actor model
 critic_fcs1_units = 128 # Number of units for the layer 1 in the critic model
-critic_fc2_units = 128  # Number of units for the layer 2 in the critic model
-bn_mode = 2             # Use Batch Norm. - 0=disabled, 1=BN before Activation, 2=BN after Activation 
-                        # (3, 4 are alt. versions of 1, 2)
+critic_fc2_units = 128  # Number of units for the layer 2 in the critic model       
+ounoise = True      
+mu = 0.                 
+theta = 0.15           
+sigma = 0.1             
+```
 
-add_ounoise = True      # Add Ornstein-Uhlenbeck noise
-mu = 0.                 # Ornstein-Uhlenbeck noise parameter
-theta = 0.15            # Ornstein-Uhlenbeck noise parameter
-sigma = 0.1             # Ornstein-Uhlenbeck noise parameter
 
 ### Result
 
