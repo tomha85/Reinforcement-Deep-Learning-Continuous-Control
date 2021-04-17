@@ -10,6 +10,8 @@ The action space is continuous and it is included a vector that has four number 
 
 ![image](https://user-images.githubusercontent.com/31414852/115116764-6c29e700-9f69-11eb-82a4-0f89c659bedb.png)
 
+Deep Deterministic Policy Gradient (DDPG) is an algorithm which concurrently learns a Q-function and a policy. It uses off-policy data and the Bellman equation to learn the Q-function, and uses the Q-function to learn the policy.
+DDPG trains a deterministic policy in an off-policy way. Because the policy is deterministic, if the agent were to explore on-policy, in the beginning it would probably not try a wide enough variety of actions to find useful learning signals. To make DDPG policies explore better, we add noise to their actions at training time. 
 
 ### Actor Neural Network Architecture
 
