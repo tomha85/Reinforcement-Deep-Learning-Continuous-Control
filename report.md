@@ -75,7 +75,7 @@ actor_fc1_units = 128   # Number of units for the layer 1 in the actor model
 actor_fc1_units = 128   # Number of units for the layer 2 in the actor model
 critic_fcs1_units = 128 # Number of units for the layer 1 in the critic model
 critic_fc2_units = 128  # Number of units for the layer 2 in the critic model       
-ounoise = True      
+      
 mu = 0.                 
 theta = 0.15           
 sigma = 0.1             
@@ -88,11 +88,11 @@ sigma = 0.1
 
 ![image](https://user-images.githubusercontent.com/31414852/115101511-cfd4f580-9f12-11eb-993b-4a697c1fae1e.png)
 
-DDPG solved the problem in 591 episodes.
+ddpg solved the problem in 591 episodes.
 
 
 ## Future Improvement
 
-- Fine tuning hyper parameters to get better performance;
-- Try to make the network deeper to  get better performance;
-- Try other Policy Gradient Algorithms, such as PPO, A3C
+- Tuning hyper parameters to get better performance;
+- Make the network more layers to  get good performance;
+- Continue working with Policy Gradient algorithm like A3C, A2C, PPO
