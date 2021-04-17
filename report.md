@@ -8,6 +8,8 @@ The task is episodic, and in order to solve the environment, your agent must get
 
 The action space is continuous and it is included a vector that has four number between -1 and 1
 
+![image](https://user-images.githubusercontent.com/31414852/115116764-6c29e700-9f69-11eb-82a4-0f89c659bedb.png)
+
 
 ### Actor Neural Network Architecture
 
